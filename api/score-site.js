@@ -88,23 +88,20 @@ ${contentText}
 """
 ${mediaSignal}
 
-Now identify two things: STRENGTHS and GAPS. This is the part scoring tools most often get wrong, so read these examples carefully before answering.
+Now identify GAPS: specific things that are missing, weak, unsubstantiated, or would concern a retail buyer evaluating this brand. This is the part scoring tools most often get wrong, so read these examples carefully before answering.
 
-STRENGTHS: specific, genuine positives — proof points, certifications, or content quality that would give a retail buyer or an AI assistant real confidence. Only include things that are actually strong. If nothing stands out, return an empty array — do not manufacture a strength.
-
-GAPS: specific things that are missing, weak, unsubstantiated, or would concern a retail buyer. For each gap, also give a specific, actionable FIX — the concrete next step to close that exact gap. Name the specific thing to add, get, or change — not generic advice like "improve your content."
-
-WRONG for a gap (this is a strength, not a gap, even though specific and true):
+WRONG — these are strengths, not gaps, even though they are specific and true. Do not output anything shaped like these:
 - "Strong nutritional transparency: detailed macro breakdowns and gluten-free status are clearly listed"
+- "Robust product structure with flavor positioning and a 4.1/5 rating from 3,117 reviews provide credibility signals"
 
-RIGHT for a gap + fix pair:
-- gap: "Gluten-free claim stated but not substantiated with third-party certification" / fix: "Get GFCO certification and add the certification badge next to the claim"
-- gap: "No packaging or label shot — only lifestyle imagery" / fix: "Add a straight-on product/label photo so a shopper can verify exactly what they're buying"
+RIGHT — these name something actually absent, weak, or risky:
+- "No mention of third-party lab testing or certifications for any health claims"
+- "Product images appear to be lifestyle-only — no packaging or label shot a shopper could use to verify contents"
 
-A gap is something a retail buyer would flag as a problem, not something they'd compliment. Do not soften a strength into something that merely sounds critical, and do not invent a fix for a gap that doesn't genuinely exist. If the content is strong across the board, gapsAndFixes should be an empty array.
+A gap is something a retail buyer would flag as a problem, not something they'd compliment. If every claim you'd otherwise mention is actually a strength, that means there are no gaps in this content for these two dimensions — return an empty array. Do not soften a strength into something that merely sounds critical.
 
 Respond with ONLY valid JSON, no markdown formatting, no code fences, in exactly this shape:
-{"pillar1Score": <integer 0-20>, "pillar3Score": <integer 0-20>, "highlight": "<one sentence, in your own words, naming one SPECIFIC thing found in this content that supports the scores>", "strengths": ["<specific genuine strength — may be an empty array>"], "gapsAndFixes": [{"gap": "<specific genuine gap>", "fix": "<specific actionable fix for that exact gap>"}]}`;
+{"pillar1Score": <integer 0-20>, "pillar3Score": <integer 0-20>, "highlight": "<one sentence, in your own words, naming one SPECIFIC thing found in this content that supports the scores — a certification, a specific claim, or a notable gap>", "findings": ["<only genuine gaps per the examples above — may be an empty array>"]}`;
 
   try {
     const aiRes = await fetch('https://api.anthropic.com/v1/messages', {
@@ -116,7 +113,7 @@ Respond with ONLY valid JSON, no markdown formatting, no code fences, in exactly
       },
       body: JSON.stringify({
         model: 'claude-haiku-4-5-20251001',
-        max_tokens: 800,
+        max_tokens: 500,
         messages: [{ role: 'user', content: prompt }],
       }),
     });
@@ -140,12 +137,7 @@ Respond with ONLY valid JSON, no markdown formatting, no code fences, in exactly
       pillar1Score: clamp(parsed.pillar1Score),
       pillar3Score: clamp(parsed.pillar3Score),
       highlight: parsed.highlight || '',
-      strengths: Array.isArray(parsed.strengths) ? parsed.strengths.filter(s => typeof s === 'string').slice(0, 3) : [],
-      gapsAndFixes: Array.isArray(parsed.gapsAndFixes)
-        ? parsed.gapsAndFixes
-            .filter(g => g && typeof g.gap === 'string' && typeof g.fix === 'string')
-            .slice(0, 3)
-        : [],
+      findings: Array.isArray(parsed.findings) ? parsed.findings.slice(0, 3) : [],
     });
   } catch (err) {
     console.error('Scoring error:', err);
