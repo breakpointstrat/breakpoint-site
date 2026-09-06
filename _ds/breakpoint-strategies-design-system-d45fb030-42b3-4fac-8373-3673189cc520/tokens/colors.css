@@ -1,0 +1,48 @@
+:root{
+  /* --- Brand core --- */
+  --citrus:#FB3C1F;          /* the one brand color. sampled from BP-Logo-Mark-Citrus */
+  --citrus-press:#D62C11;
+  --citrus-tint:#FEE2DC;
+  --citrus-wash:#FFF4F1;
+
+  --ink:#000000;             /* logotype black */
+  --ink-soft:#141210;
+  --ink-mid:#3A3734;
+
+  /* --- Neutrals: warm editorial grey ramp --- */
+  --neutral-0:#FFFFFF;
+  --neutral-50:#FAF9F8;
+  --neutral-100:#F2F2F2;     /* "Fog" — sampled from the square lockup */
+  --neutral-200:#E6E4E1;
+  --neutral-300:#D2CFCB;
+  --neutral-400:#B0ACA7;
+  --neutral-500:#8A8681;
+  --neutral-600:#645F5A;
+  --neutral-700:#443F3B;
+  --neutral-800:#26221F;
+  --neutral-900:#141210;
+
+  /* --- Secondary editorial hues (backgrounds & data only, never CTAs) --- */
+  --sand:#EDE6DC;
+  --clay:#C9A18C;
+  --slate:#37423F;
+  --slate-tint:#E3E7E5;
+
+  /* --- Semantic --- */
+  --success:#1F7A4D;
+  --success-tint:#E4F1EA;
+  --warning:#B5820D;
+  --warning-tint:#FBF0D9;
+  --danger:#C42B12;
+  --danger-tint:#FBE3DE;
+  --info:#2A5A8C;
+  --info-tint:#E3EAF2;
+
+  /* --- Alpha utilities --- */
+  --alpha-ink-04:rgba(20,18,16,.04);
+  --alpha-ink-08:rgba(20,18,16,.08);
+  --alpha-ink-14:rgba(20,18,16,.14);
+  --alpha-ink-60:rgba(20,18,16,.60);
+  --alpha-white-12:rgba(255,255,255,.12);
+  --alpha-white-70:rgba(255,255,255,.70);
+}

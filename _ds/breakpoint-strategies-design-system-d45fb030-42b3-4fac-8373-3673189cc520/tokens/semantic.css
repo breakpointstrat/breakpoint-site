@@ -1,0 +1,38 @@
+:root{
+  /* Surfaces */
+  --surface-page:var(--neutral-0);
+  --surface-muted:var(--neutral-100);
+  --surface-card:var(--neutral-0);
+  --surface-card-muted:var(--neutral-50);
+  --surface-inverse:var(--ink);
+  --surface-brand:var(--citrus);
+  --surface-brand-wash:var(--citrus-wash);
+  --surface-sand:var(--sand);
+  --surface-overlay:rgba(20,18,16,.72);
+
+  /* Text */
+  --text-strong:var(--ink);
+  --text-default:var(--neutral-800);
+  --text-muted:var(--neutral-600);
+  --text-subtle:var(--neutral-500);
+  --text-inverse:var(--neutral-0);
+  --text-inverse-muted:rgba(255,255,255,.68);
+  --text-brand:var(--citrus);
+  --text-link:var(--citrus);
+  --text-link-hover:var(--citrus-press);
+
+  /* Lines */
+  --border-default:var(--neutral-200);
+  --border-emphasis:var(--neutral-300);
+  --border-inverse:var(--alpha-white-12);
+  --focus-ring:var(--citrus);
+
+  /* Controls */
+  --control-h-sm:34px; --control-h-md:44px; --control-h-lg:54px;
+  --control-px-sm:16px; --control-px-md:22px; --control-px-lg:30px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font-body);font-size:var(--text-body);line-height:var(--lh-body);color:var(--text-default);background:var(--surface-page);-webkit-font-smoothing:antialiased;text-wrap:pretty}
+a{color:var(--text-link);text-decoration:none;border-bottom:1px solid currentColor;transition:var(--transition-ui)}
+a:hover{color:var(--text-link-hover)}
+::selection{background:var(--citrus);color:#fff}
