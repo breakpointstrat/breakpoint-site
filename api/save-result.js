@@ -52,14 +52,6 @@ module.exports = async (req, res) => {
     res.status(200).json({ success: true, id });
   } catch (err) {
     console.error('save-result error:', err);
-    res.status(200).json({
-      success: false,
-      reason: 'Request failed.',
-      debug: {
-        message: err && err.message,
-        hasUrl: !!process.env.UPSTASH_REDIS_REST_URL,
-        hasToken: !!process.env.UPSTASH_REDIS_REST_TOKEN,
-      },
-    });
+    res.status(200).json({ success: false, reason: 'Request failed.' });
   }
 };
