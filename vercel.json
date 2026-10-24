@@ -1,5 +1,9 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/privacy", "destination": "/legal#sms-privacy", "permanent": false },
+    { "source": "/sms-terms", "destination": "/legal#sms-terms", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/score/:id", "destination": "/score" }
   ]
