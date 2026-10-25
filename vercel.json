@@ -2,9 +2,8 @@
   "cleanUrls": true,
   "redirects": [
     { "source": "/privacy", "destination": "/legal#sms-privacy", "permanent": false },
-    { "source": "/sms-terms", "destination": "/legal#sms-terms", "permanent": false }
-  ],
-  "rewrites": [
-    { "source": "/score/:id", "destination": "/score" }
+    { "source": "/sms-terms", "destination": "/legal#sms-terms", "permanent": false },
+    { "source": "/score", "destination": "/snapshot", "permanent": true },
+    { "source": "/score/:id", "destination": "/snapshot", "permanent": true }
   ]
 }
