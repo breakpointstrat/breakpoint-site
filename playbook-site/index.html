@@ -41,10 +41,10 @@
   "offers": [
     { "@type": "Offer", "name": "Snapshot", "price": "0", "priceCurrency": "USD", "url": "https://app.breakpointstrat.com/p/snapshot?ref=playbook" },
     { "@type": "Offer", "name": "The Playbook", "price": "4950", "priceCurrency": "USD", "priceValidUntil": "2026-12-31", "url": "https://playbook.breakpointstrat.com/#tiers" },
-    { "@type": "Offer", "name": "Monitor", "priceCurrency": "USD", "url": "https://playbook.breakpointstrat.com/#tiers",
-      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "495", "priceCurrency": "USD", "unitText": "MONTH" } },
-    { "@type": "Offer", "name": "Operator", "priceCurrency": "USD", "url": "https://playbook.breakpointstrat.com/#tiers",
-      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "2500", "priceCurrency": "USD", "unitText": "MONTH" } }
+    { "@type": "Offer", "name": "Monitor", "priceCurrency": "USD", "priceValidUntil": "2026-12-31", "url": "https://playbook.breakpointstrat.com/#tiers",
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "995", "priceCurrency": "USD", "unitText": "MONTH" } },
+    { "@type": "Offer", "name": "Operator", "priceCurrency": "USD", "priceValidUntil": "2026-12-31", "url": "https://playbook.breakpointstrat.com/#tiers",
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "2495", "priceCurrency": "USD", "unitText": "MONTH" } }
   ]
 }
 </script>
@@ -199,7 +199,6 @@ html:has(.menu[open]){overflow:hidden}
 .tiers{display:grid;gap:20px}
 .tier{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:4px;background:#fff;padding:26px 22px 24px}
 .tier.featured{border:2px solid var(--citrus)}
-.badge{position:absolute;top:-12px;left:22px;background:var(--citrus);color:#fff;border-radius:999px;padding:6px 12px;font:500 10.5px/1 var(--eyebrow);letter-spacing:.14em;text-transform:uppercase}
 .tier-name{font:500 12px/1.2 var(--eyebrow);letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
 .price{margin-top:14px;font:400 44px/1 var(--display);color:var(--ink);letter-spacing:-.02em}
 .price s{font-size:26px;color:var(--n500);margin-right:8px;text-decoration-thickness:1.5px}
@@ -276,7 +275,7 @@ html:has(.menu[open]){overflow:hidden}
 </head>
 <body>
 
-<div class="banner founding">Founding price: The Playbook is $4,950 through December 31, 2026. <a href="#tiers" data-track="banner-tiers">See the tiers</a></div>
+<div class="banner founding">Founding prices on every tier through December 31, 2026. <a href="#tiers" data-track="banner-tiers">See the tiers</a></div>
 
 <header class="site-head">
   <div class="wrap">
@@ -406,7 +405,6 @@ html:has(.menu[open]){overflow:hidden}
       </article>
 
       <article class="tier featured">
-        <span class="badge">Most popular</span>
         <p class="tier-name">The Playbook</p>
         <p class="price"><span class="founding"><s>$9,950</s>$4,950</span><span class="standard">$9,950</span></p>
         <p class="price-note founding">Founding price through December 31, 2026</p>
@@ -426,8 +424,9 @@ html:has(.menu[open]){overflow:hidden}
 
       <article class="tier">
         <p class="tier-name">Monitor</p>
-        <p class="price"><span class="m">$495<small>/mo</small></span><span class="y">$4,950<small>/yr</small></span></p>
-        <p class="price-alt"><span class="m">or $4,950/yr</span><span class="y">or $495/mo</span></p>
+        <p class="price"><span class="m"><span class="founding"><s>$1,495</s>$995</span><span class="standard">$1,495</span><small>/mo</small></span><span class="y"><span class="founding"><s>$14,950</s>$9,950</span><span class="standard">$14,950</span><small>/yr</small></span></p>
+        <p class="price-note founding">Founding price through December 31, 2026</p>
+        <p class="price-alt"><span class="m">or <span class="founding">$9,950</span><span class="standard">$14,950</span>/yr</span><span class="y">or <span class="founding">$995</span><span class="standard">$1,495</span>/mo</span></p>
         <ul>
           <li>For teams running the roadmap themselves.</li>
           <li>Weekly tracking against your roadmap: status by pillar, what's done, in progress and stalled, and what waiting is costing.</li>
@@ -441,8 +440,9 @@ html:has(.menu[open]){overflow:hidden}
 
       <article class="tier">
         <p class="tier-name">Operator</p>
-        <p class="price"><span class="m">$2,500<small>/mo</small></span><span class="y">$25,000<small>/yr</small></span></p>
-        <p class="price-alt"><span class="m">or $25,000/yr</span><span class="y">or $2,500/mo</span></p>
+        <p class="price"><span class="m"><span class="founding"><s>$3,495</s>$2,495</span><span class="standard">$3,495</span><small>/mo</small></span><span class="y"><span class="founding"><s>$34,950</s>$24,950</span><span class="standard">$34,950</span><small>/yr</small></span></p>
+        <p class="price-note founding">Founding price through December 31, 2026</p>
+        <p class="price-alt"><span class="m">or <span class="founding">$24,950</span><span class="standard">$34,950</span>/yr</span><span class="y">or <span class="founding">$2,495</span><span class="standard">$3,495</span>/mo</span></p>
         <ul>
           <li>Everything in Monitor.</li>
           <li>A senior operator reviews your updates twice a month, with a 30-minute check-in.</li>
@@ -543,12 +543,14 @@ html:has(.menu[open]){overflow:hidden}
     });
   });
 
-  // After the founding window, the structured data carries the standard price.
+  // After the founding window, the structured data carries the list prices.
   if (document.documentElement.classList.contains("post-founding")) {
     var ld = document.getElementById("ld-product");
     var data = JSON.parse(ld.textContent);
     data.offers[1].price = "9950";
-    delete data.offers[1].priceValidUntil;
+    data.offers[2].priceSpecification.price = "1495";
+    data.offers[3].priceSpecification.price = "3495";
+    [1, 2, 3].forEach(function (i) { delete data.offers[i].priceValidUntil; });
     ld.textContent = JSON.stringify(data);
   }
 
