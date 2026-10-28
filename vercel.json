@@ -1,21 +1,63 @@
 {
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/", "has": [{ "type": "host", "value": "playbook.breakpointstrat.com" }], "destination": "/playbook-site/index.html" },
-    { "source": "/og.png", "has": [{ "type": "host", "value": "playbook.breakpointstrat.com" }], "destination": "/playbook-site/og.png" },
-    { "source": "/robots.txt", "has": [{ "type": "host", "value": "playbook.breakpointstrat.com" }], "destination": "/playbook-site/robots.txt" },
-    { "source": "/sitemap.xml", "has": [{ "type": "host", "value": "playbook.breakpointstrat.com" }], "destination": "/playbook-site/sitemap.xml" }
-  ],
   "redirects": [
-    { "source": "/playbook", "destination": "https://playbook.breakpointstrat.com/", "statusCode": 301 },
-    { "source": "/playbook.html", "destination": "https://playbook.breakpointstrat.com/", "statusCode": 301 },
-    { "source": "/:page(about|contact|legal|snapshot|data-deletion|llms.txt)", "has": [{ "type": "host", "value": "playbook.breakpointstrat.com" }], "destination": "https://www.breakpointstrat.com/:page", "statusCode": 301 },
-    { "source": "/privacy", "destination": "/legal#sms-privacy", "permanent": false },
-    { "source": "/sms-terms", "destination": "/legal#sms-terms", "permanent": false },
-    { "source": "/score", "destination": "/snapshot", "permanent": true },
-    { "source": "/score/:id", "destination": "/snapshot", "permanent": true }
+    {
+      "source": "/playbook",
+      "destination": "https://playbook.breakpointstrat.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/playbook.html",
+      "destination": "https://playbook.breakpointstrat.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:page(about|contact|legal|snapshot|data-deletion|llms.txt)",
+      "has": [
+        {
+          "type": "host",
+          "value": "playbook.breakpointstrat.com"
+        }
+      ],
+      "destination": "https://www.breakpointstrat.com/:page",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy",
+      "destination": "/legal#sms-privacy",
+      "permanent": false
+    },
+    {
+      "source": "/sms-terms",
+      "destination": "/legal#sms-terms",
+      "permanent": false
+    },
+    {
+      "source": "/score",
+      "destination": "/snapshot",
+      "permanent": true
+    },
+    {
+      "source": "/score/:id",
+      "destination": "/snapshot",
+      "permanent": true
+    }
   ],
   "headers": [
-    { "source": "/playbook-site/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] }
+    {
+      "source": "/playbook-site/(.*)",
+      "missing": [
+        {
+          "type": "host",
+          "value": "playbook.breakpointstrat.com"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
   ]
 }
