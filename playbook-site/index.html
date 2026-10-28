@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Playbook by BreakPoint: get a retail buyer to yes</title>
+<meta name="description" content="The Playbook shows where your brand stands on the AI shelf and the physical one, builds the plan that gets a retail buyer to yes, and tracks it every week. Start with a free Snapshot.">
+<link rel="canonical" href="https://playbook.breakpointstrat.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BreakPoint Strategies">
+<meta property="og:url" content="https://playbook.breakpointstrat.com/">
+<meta property="og:title" content="The Playbook: if you're not in the five, you're not on the shelf.">
+<meta property="og:description" content="Where you stand on the AI shelf and the physical one, the plan that gets a buyer to yes, tracked every week. Start with a free Snapshot.">
+<meta property="og:image" content="https://playbook.breakpointstrat.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/assets/logo/favicon.png">
+<link rel="apple-touch-icon" href="/assets/logo/bp-app-icon-1024.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;1,400&family=Jost:wght@500&family=Work+Sans:wght@400;500&display=swap">
+<script>
+  // Founding price ends at midnight, America/New_York, on January 1, 2027.
+  // ?asof=YYYY-MM-DD previews another date.
+  (function () {
+    var asof = (location.search.match(/[?&]asof=(\d{4}-\d{2}-\d{2})/) || [])[1];
+    var today = asof || new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+    if (today >= "2027-01-01") document.documentElement.className += " post-founding";
+  })();
+</script>
+<script type="application/ld+json" id="ld-product">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "The Playbook",
+  "description": "A retail readiness diagnostic and sequenced roadmap for brands born online: five pillars assessed on your real data, a Case for Yes for the buyer meeting, and weekly tracking.",
+  "url": "https://playbook.breakpointstrat.com/",
+  "image": "https://playbook.breakpointstrat.com/og.png",
+  "brand": { "@type": "Brand", "name": "BreakPoint Strategies" },
+  "offers": [
+    { "@type": "Offer", "name": "Snapshot", "price": "0", "priceCurrency": "USD", "url": "https://app.breakpointstrat.com/p/snapshot?ref=playbook" },
+    { "@type": "Offer", "name": "The Playbook", "price": "4950", "priceCurrency": "USD", "priceValidUntil": "2026-12-31", "url": "https://playbook.breakpointstrat.com/#tiers" },
+    { "@type": "Offer", "name": "Monitor", "priceCurrency": "USD", "url": "https://playbook.breakpointstrat.com/#tiers",
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "495", "priceCurrency": "USD", "unitText": "MONTH" } },
+    { "@type": "Offer", "name": "Operator", "priceCurrency": "USD", "url": "https://playbook.breakpointstrat.com/#tiers",
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "2500", "priceCurrency": "USD", "unitText": "MONTH" } }
+  ]
+}
+</script>
+<style>
+:root{
+  --citrus:#FB3C1F;--citrus-press:#D62C11;--citrus-tint:#FEE2DC;--citrus-wash:#FFF4F1;
+  --ink:#000;--ink-soft:#141210;--ink-mid:#3A3734;
+  --paper:#fff;--fog:#F2F2F2;--n200:#E6E4E1;--n300:#D2CFCB;--n500:#8A8681;--n600:#645F5A;
+  --slate:#37423F;--slate-tint:#E3E7E5;
+  --line:rgba(20,18,16,.14);--line-inv:rgba(255,255,255,.16);
+  --display:"Alegreya",Georgia,"Times New Roman",serif;
+  --eyebrow:"Jost","Futura","Century Gothic",sans-serif;
+  --body:"Work Sans","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.2,0,.2,1);
+  --gutter:20px;--max:1280px;--sy:72px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink-soft);font:400 17px/1.62 var(--body);overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--citrus);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font:500 12px/1.2 var(--eyebrow);letter-spacing:.22em;text-transform:uppercase;color:var(--citrus)}
+.inv .eyebrow{color:var(--citrus)}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.015em;color:var(--ink)}
+h1{font-size:clamp(42px,8.4vw,88px);line-height:.98;letter-spacing:-.02em}
+h2{font-size:clamp(32px,5vw,56px);line-height:1.04}
+h3{font-size:24px;line-height:1.2}
+.inv h1,.inv h2,.inv h3{color:#fff}
+.lede{font-size:19px;line-height:1.55;color:var(--ink-mid);max-width:58ch}
+.inv .lede{color:rgba(255,255,255,.78)}
+section{padding:var(--sy) 0}
+.head{border-top:1px solid var(--line);padding-top:16px;margin-bottom:40px}
+.inv .head{border-color:var(--line-inv)}
+.head h2{margin-top:16px;max-width:20ch}
+.inv{background:var(--ink-soft);color:rgba(255,255,255,.86)}
+.fog{background:var(--fog)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font:500 13px/1 var(--eyebrow);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .14s var(--ease),color .14s var(--ease),border-color .14s var(--ease)}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--citrus);color:#fff}
+.btn-primary:hover{background:var(--citrus-press)}
+.btn-secondary{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-secondary:hover{background:var(--ink);color:#fff}
+.inv .btn-secondary{border-color:#fff;color:#fff}
+.inv .btn-secondary:hover{background:#fff;color:var(--ink)}
+.btn-sm{min-height:38px;padding:0 18px;font-size:12px}
+.btn svg{flex:none}
+.link{font:500 13px/1.2 var(--eyebrow);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+.link:hover{color:var(--citrus-press)}
+
+/* founding banner */
+.banner{background:var(--citrus);color:#fff;text-align:center;font-size:14px;line-height:1.4;padding:10px var(--gutter)}
+.banner a{color:#fff;font-weight:500}
+.post-founding .founding{display:none!important}
+.standard{display:none}
+.post-founding .standard{display:revert}
+
+/* header */
+.site-head{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
+.logo img{width:129px;height:32px}
+.nav{display:none}
+.nav a{font:500 12px/1 var(--eyebrow);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink-mid)}
+.nav a:hover{color:var(--citrus-press)}
+.head-cta{display:none;align-items:center;gap:20px}
+.menu>summary{list-style:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-right:-10px;cursor:pointer;color:var(--ink)}
+.menu>summary::-webkit-details-marker{display:none}
+.menu .x,.menu[open] .bars{display:none}
+.menu[open] .x{display:block}
+.menu-panel{position:absolute;left:0;right:0;top:100%;height:calc(100vh - 64px);height:calc(100dvh - 64px);background:#fff;padding:8px var(--gutter) 40px;overflow-y:auto;display:flex;flex-direction:column}
+.menu-panel a.m{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);font:400 26px/1.1 var(--display);text-decoration:none;color:var(--ink)}
+.menu-panel .btn{margin-top:28px}
+.menu-panel .sub{margin-top:20px;font-size:15px;color:var(--n600)}
+html:has(.menu[open]){overflow:hidden}
+.site-head:has(.menu[open]){-webkit-backdrop-filter:none;backdrop-filter:none;background:#fff}
+@media (min-width:960px){
+  .nav{display:flex;gap:28px}
+  .head-cta{display:flex}
+  .menu{display:none}
+  .head-cta .login{font:500 12px/1 var(--eyebrow);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--n600)}
+}
+
+/* hero */
+.hero{padding:56px 0 var(--sy)}
+.hero-grid{display:grid;gap:48px}
+.hero h1{margin-top:20px;max-width:14ch}
+.hero .lede{margin-top:24px}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;margin-top:32px}
+.sample{border:1px solid var(--line);border-radius:4px;background:#fff;align-self:start}
+.sample-top{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line);font:500 11px/1 var(--eyebrow);letter-spacing:.18em;text-transform:uppercase;color:var(--n600)}
+.sample-top b{font-weight:500;color:var(--ink)}
+.sample ul{list-style:none}
+.sample li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 18px;border-bottom:1px solid var(--line);font-size:15px;line-height:1.3}
+.sample li:last-child{border-bottom:0}
+.sample li.locked{color:var(--n500)}
+.tag{flex:none;display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;font:500 10.5px/1 var(--eyebrow);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.tag-warn{background:#FBF0D9;color:#7A5608}
+.tag-risk{background:var(--citrus-tint);color:#A3240E}
+.tag-lock{background:var(--fog);color:var(--n600)}
+.sample-foot{padding:12px 18px;background:var(--fog);font-size:13px;color:var(--n600);border-top:1px solid var(--line)}
+@media (min-width:960px){
+  .hero{padding:96px 0 112px}
+  .hero-grid{grid-template-columns:1.2fr .8fr;gap:72px;align-items:center}
+}
+
+/* why now */
+.stats{display:grid;gap:0}
+.stat{border-top:1px solid var(--line-inv);padding:24px 0 28px}
+.stat strong{display:block;font:400 clamp(48px,7vw,72px)/1 var(--display);color:var(--citrus);letter-spacing:-.02em}
+.stat p{margin-top:14px;color:rgba(255,255,255,.86);max-width:34ch}
+.stat cite{display:block;margin-top:10px;font:500 11px/1.4 var(--eyebrow);letter-spacing:.14em;text-transform:uppercase;font-style:normal;color:rgba(255,255,255,.5)}
+.under{margin-top:40px;font:italic 400 clamp(22px,3vw,30px)/1.3 var(--display);color:#fff;max-width:36ch}
+@media (min-width:760px){.stats{grid-template-columns:repeat(3,1fr);gap:32px}}
+
+/* layers */
+.layers{display:grid;gap:20px}
+.layer{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.layer-bar{padding:18px 22px;color:#fff}
+.layer-bar .eyebrow{color:rgba(255,255,255,.8)}
+.layer-bar h3{color:#fff;margin-top:8px}
+.l-diagnose .layer-bar{background:var(--citrus)}
+.l-track .layer-bar{background:var(--slate)}
+.l-execute .layer-bar{background:var(--ink)}
+.layer-body{padding:20px 22px 24px}
+.layer-body p{font-size:16px}
+.layer-body .kicker{font-family:var(--display);font-size:20px;line-height:1.3;color:var(--ink);margin-bottom:10px}
+@media (min-width:860px){.layers{grid-template-columns:repeat(3,1fr)}}
+
+/* pillars */
+.pillars{list-style:none;display:grid;gap:0}
+.pillar{display:grid;grid-template-columns:14px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--line)}
+.pillar::before{content:"";width:8px;height:8px;margin-top:11px;background:var(--ink)}
+.pillar h3{font-size:22px}
+.pillar p{margin-top:6px;color:var(--ink-mid);max-width:60ch}
+.pillar.new{background:var(--citrus-wash);border-top:2px solid var(--citrus);margin:0 calc(var(--gutter) * -1);padding-left:var(--gutter);padding-right:var(--gutter);grid-template-columns:14px 1fr}
+.pillar.new::before{background:var(--citrus)}
+.pillar .tag{margin-left:10px;vertical-align:4px;background:var(--citrus);color:#fff}
+@media (min-width:860px){
+  .pillars{grid-template-columns:1fr 1fr;column-gap:48px}
+  .pillar.new{margin:0;padding-left:20px;padding-right:20px}
+}
+
+/* tiers */
+.toggle{display:inline-flex;border:1px solid var(--ink);border-radius:999px;padding:3px;margin-bottom:32px}
+.toggle button{appearance:none;border:0;background:none;border-radius:999px;padding:10px 18px;font:500 12px/1 var(--eyebrow);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.toggle .save{color:var(--citrus-press);margin-left:6px}
+.toggle button[aria-pressed="true"] .save{color:#FFB4A6}
+.tiers{display:grid;gap:20px}
+.tier{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:4px;background:#fff;padding:26px 22px 24px}
+.tier.featured{border:2px solid var(--citrus)}
+.badge{position:absolute;top:-12px;left:22px;background:var(--citrus);color:#fff;border-radius:999px;padding:6px 12px;font:500 10.5px/1 var(--eyebrow);letter-spacing:.14em;text-transform:uppercase}
+.tier-name{font:500 12px/1.2 var(--eyebrow);letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+.price{margin-top:14px;font:400 44px/1 var(--display);color:var(--ink);letter-spacing:-.02em}
+.price s{font-size:26px;color:var(--n500);margin-right:8px;text-decoration-thickness:1.5px}
+.price small{font:400 16px/1 var(--body);color:var(--n600);letter-spacing:0;margin-left:4px}
+.price-note{margin-top:10px;font-size:14px;line-height:1.4;color:var(--citrus-press);font-weight:500}
+.price-alt{margin-top:10px;font-size:14px;color:var(--n600)}
+.tier ul{list-style:none;margin-top:22px;border-top:1px solid var(--line)}
+.tier li{position:relative;padding:11px 0 11px 22px;border-bottom:1px solid var(--line);font-size:15px;line-height:1.5}
+.tier li::before{content:"";position:absolute;left:2px;top:19px;width:8px;height:1.5px;background:var(--citrus)}
+.tier li.inc{background:var(--fog);margin:0 -22px;padding-left:44px;padding-right:22px}
+.tier li.inc::before{left:24px}
+.tier-cta{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.tier-cta .btn{width:100%}
+.card-note{margin-top:auto;padding-top:22px;font:500 12px/1.4 var(--eyebrow);letter-spacing:.12em;text-transform:uppercase;color:var(--n600)}
+.tiers-foot{margin-top:28px;font-size:14px;color:var(--n600)}
+.y,.annual .m{display:none}
+.annual .y{display:inline}
+@media (min-width:760px){.tiers{grid-template-columns:1fr 1fr}}
+@media (min-width:1240px){.tiers{grid-template-columns:repeat(4,1fr);gap:16px}.tier{padding:26px 20px 22px}.tier li.inc{margin:0 -20px;padding-left:42px;padding-right:20px}.tier li.inc::before{left:22px}.tier-cta .btn{padding:0 14px;white-space:nowrap;font-size:12px}}
+
+/* how it works */
+.steps{list-style:none;counter-reset:s;display:grid;gap:0}
+.step{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:12px;padding:22px 0;border-top:1px solid var(--line)}
+.step::before{content:counter(s);font:400 44px/1 var(--display);color:var(--citrus)}
+.step h3{font-size:22px}
+.step p{margin-top:4px;color:var(--ink-mid)}
+@media (min-width:960px){.steps{grid-template-columns:repeat(5,1fr);gap:24px}.step{grid-template-columns:1fr;gap:16px}}
+
+/* fit */
+.fit{display:grid;gap:20px}
+.fit div{border-top:2px solid var(--ink);padding-top:18px}
+.fit div.no{border-color:var(--n300)}
+.fit h3{font-size:26px}
+.fit p{margin-top:8px;color:var(--ink-mid);max-width:44ch}
+@media (min-width:760px){.fit{grid-template-columns:1fr 1fr;gap:48px}}
+
+/* proof */
+.proof p.big{font:400 clamp(22px,3vw,30px)/1.35 var(--display);color:#fff;max-width:40ch}
+.quotes{display:grid;gap:24px;margin-top:40px}
+
+/* faq */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;cursor:pointer;font:400 22px/1.3 var(--display);color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font:300 28px/1 var(--body);color:var(--citrus);transition:transform .22s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 24px;color:var(--ink-mid);max-width:64ch}
+@media (min-width:960px){.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}.faq-grid .head{margin-bottom:0}}
+
+/* close */
+.close{text-align:left}
+.close h2{max-width:18ch;margin-top:16px}
+.close .actions{display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px;margin-top:36px}
+.close .agency{font-size:15px;color:rgba(255,255,255,.7)}
+.close .agency a{color:#fff}
+
+/* footer */
+.site-foot{background:var(--ink);color:rgba(255,255,255,.7);padding:48px 0 32px;font-size:14px}
+.foot-grid{display:grid;gap:32px}
+.site-foot img{width:129px;height:32px}
+.site-foot h4{font:500 11px/1 var(--eyebrow);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}
+.site-foot ul{list-style:none;display:grid;gap:10px}
+.site-foot a{text-decoration:none;color:#fff}
+.site-foot a:hover{color:var(--citrus)}
+.legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line-inv);display:flex;flex-wrap:wrap;gap:12px 24px;font:500 11px/1.4 var(--eyebrow);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+@media (min-width:760px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+
+@media (min-width:760px){:root{--gutter:32px;--sy:104px}}
+@media (min-width:1140px){:root{--sy:128px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+<script async defer id="hs-script-loader" src="https://js-na2.hs-scripts.com/244295622.js"></script>
+</head>
+<body>
+
+<div class="banner founding">Founding price: The Playbook is $4,950 through December 31, 2026. <a href="#tiers" data-track="banner-tiers">See the tiers</a></div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="The Playbook by BreakPoint Strategies, home"><img src="/assets/logo/bp-logo-full-black.png" alt="BreakPoint Strategies" width="129" height="32"></a>
+    <nav class="nav" aria-label="Page">
+      <a href="#what">What you get</a>
+      <a href="#pillars">Pillars</a>
+      <a href="#tiers">Tiers</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="head-cta">
+      <a class="login" href="https://app.breakpointstrat.com/p/sign-in">Client login</a>
+      <a class="btn btn-primary btn-sm" href="https://app.breakpointstrat.com/p/snapshot?ref=playbook-header" data-track="snapshot-header">Free Snapshot</a>
+    </div>
+    <details class="menu">
+      <summary aria-label="Menu">
+        <svg class="bars" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+        <svg class="x" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </summary>
+      <div class="menu-panel">
+        <a class="m" href="#what">What you get</a>
+        <a class="m" href="#pillars">Pillars</a>
+        <a class="m" href="#tiers">Tiers</a>
+        <a class="m" href="#how">How it works</a>
+        <a class="m" href="#faq">FAQ</a>
+        <a class="m" href="https://app.breakpointstrat.com/p/sign-in">Client login</a>
+        <a class="btn btn-primary" href="https://app.breakpointstrat.com/p/snapshot?ref=playbook-menu" data-track="snapshot-menu">Run your free Snapshot</a>
+        <p class="sub">Looking for the agency? <a href="https://www.breakpointstrat.com/">Visit breakpointstrat.com</a></p>
+      </div>
+    </details>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">The Playbook</p>
+      <h1>If you're not in the five, you're not on the shelf.</h1>
+      <p class="lede">AI shopping assistants now pick a handful of products for every search, and Walmart just opened its store to AI agents that buy for the shopper. The Playbook shows where you stand on the AI shelf and the physical one, builds the plan that gets a buyer to yes, and tracks it every week.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://app.breakpointstrat.com/p/snapshot?ref=playbook-hero" data-track="snapshot-hero">Run your free Snapshot <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="link" href="#tiers" data-track="hero-tiers">See the tiers</a>
+      </div>
+    </div>
+    <figure class="sample" aria-label="Sample Snapshot">
+      <div class="sample-top"><b>Sample Snapshot</b><span>By pillar</span></div>
+      <ul>
+        <li>Digital Shelf &amp; PDP <span class="tag tag-warn">Needs work</span></li>
+        <li>AI &amp; Search Discoverability <span class="tag tag-risk">At risk</span></li>
+        <li class="locked">Retail Media Readiness <span class="tag tag-lock">Locked · 4 issues</span></li>
+        <li class="locked">Marketplace &amp; Velocity <span class="tag tag-lock">Locked · 3 issues</span></li>
+        <li class="locked">Brand &amp; Category Fit <span class="tag tag-lock">Locked · 2 issues</span></li>
+      </ul>
+      <figcaption class="sample-foot">Illustrative. Statuses, not scores.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="inv" id="why">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Why now</p></div>
+    <div class="stats">
+      <div class="stat"><strong>50 → 5</strong><p>Amazon's shopping assistant narrows about 50 results to about five.</p><cite>PPC Land, April 2026</cite></div>
+      <div class="stat"><strong>+35%</strong><p>Walmart shoppers who use its Sparky assistant spend about 35% more.</p><cite>Walmart, via Talk Business, July 2026</cite></div>
+      <div class="stat"><strong>Oct. 21, 2026</strong><p>Walmart opened its store to approved AI shopping agents that search, compare and buy on a shopper's behalf.</p><cite>TechCrunch</cite></div>
+    </div>
+    <p class="under">An agent doesn't browse the way a person does. It reads your product data, your ratings and whether you're in stock. Then it picks.</p>
+  </div>
+</section>
+
+<section id="what">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">What you get</p><h2>One plan. Three layers. One job: a buyer's yes.</h2></div>
+    <div class="layers">
+      <article class="layer l-diagnose">
+        <div class="layer-bar"><p class="eyebrow">The Playbook</p><h3>Diagnose</h3></div>
+        <div class="layer-body"><p class="kicker">Know what a buyer will poke at, before they do.</p><p>Five pillars, assessed on your real data. A sequenced roadmap, quick wins first. A Case for Yes you can take into the meeting.</p></div>
+      </article>
+      <article class="layer l-track">
+        <div class="layer-bar"><p class="eyebrow">The platform</p><h3>Track</h3></div>
+        <div class="layer-body"><p class="kicker">Your plan, measured every week.</p><p>What moved, and what stalled. Alerts that would have cost you money. Whether your Case for Yes got stronger.</p></div>
+      </article>
+      <article class="layer l-execute">
+        <div class="layer-bar"><p class="eyebrow">The agency</p><h3>Execute</h3></div>
+        <div class="layer-body"><p class="kicker">Run it yourself, or run it through us.</p><p>The senior operators who wrote your plan can execute it.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="fog" id="pillars">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">The five pillars</p><h2>What a retail buyer checks.</h2></div>
+    <ul class="pillars">
+      <li class="pillar"><div><h3>Digital Shelf &amp; PDP</h3><p>Is your product page built to turn attention into a sale? Images, content, reviews, keywords and buy-box control.</p></div></li>
+      <li class="pillar"><div><h3>Retail Media Readiness</h3><p>Is your paid engine mature enough to point at retail, and pointed the right way?</p></div></li>
+      <li class="pillar new"><div><h3>AI &amp; Search Discoverability <span class="tag">Newest</span></h3><p>Do you show up when a shopper, or an AI shopping assistant, asks the category question?</p></div></li>
+      <li class="pillar"><div><h3>Marketplace &amp; Velocity</h3><p>Can your operations support the volume a retail bet requires?</p></div></li>
+      <li class="pillar"><div><h3>Brand &amp; Category Fit</h3><p>Does your positioning read as ready to a buyer, and are you part of the current conversation in your category?</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section id="tiers">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">The tiers</p><h2>Start free. Go as deep as you need.</h2></div>
+    <div class="toggle" role="group" aria-label="Billing period">
+      <button type="button" aria-pressed="true" data-period="monthly">Monthly</button>
+      <button type="button" aria-pressed="false" data-period="annual">Annual<span class="save">2 months free</span></button>
+    </div>
+    <div class="tiers" id="tier-cards">
+
+      <article class="tier">
+        <p class="tier-name">Snapshot</p>
+        <p class="price">Free</p>
+        <ul>
+          <li>Your real Playbook, two pillars in.</li>
+          <li>Full intake, the same one paying clients complete.</li>
+          <li>Digital Shelf &amp; PDP and AI &amp; Search Discoverability, shown in full.</li>
+          <li>The other three pillars, the roadmap and the Case for Yes stay locked, each with how many issues we found.</li>
+          <li>Built on pulled data. Approved by our team before it runs.</li>
+        </ul>
+        <div class="tier-cta"><a class="btn btn-secondary" href="https://app.breakpointstrat.com/p/snapshot?ref=playbook-tier" data-track="snapshot-tier">Run your free Snapshot</a></div>
+      </article>
+
+      <article class="tier featured">
+        <span class="badge">Most popular</span>
+        <p class="tier-name">The Playbook</p>
+        <p class="price"><span class="founding"><s>$9,950</s>$4,950</span><span class="standard">$9,950</span></p>
+        <p class="price-note founding">Founding price through December 31, 2026</p>
+        <ul>
+          <li>All five pillars, assessed on your real data. Not a survey.</li>
+          <li>A sequenced roadmap: quick wins in the first 30 days, foundational fixes by day 90, strategic bets after that.</li>
+          <li>Every item has an owner, a first step and a clear definition of done.</li>
+          <li>The Case for Yes: what you can already prove to a buyer, and what the roadmap still has to earn.</li>
+          <li>Reviewed by a senior operator before it's delivered.</li>
+          <li class="inc"><strong>Includes 90 days of Operator:</strong> a live walkthrough, weekly updates, senior check-ins at day 30 and day 60, and a full re-check at day 90.</li>
+        </ul>
+        <div class="tier-cta">
+          <a class="btn btn-primary" href="https://app.breakpointstrat.com/p/snapshot?ref=playbook-tier-pb" data-track="snapshot-playbook">Start with a free Snapshot</a>
+          <a class="link" href="https://cal.com/masonkesner/breakpoint-playbook-call" target="_blank" rel="noopener" data-track="book-playbook">Or book a call</a>
+        </div>
+      </article>
+
+      <article class="tier">
+        <p class="tier-name">Monitor</p>
+        <p class="price"><span class="m">$495<small>/mo</small></span><span class="y">$4,950<small>/yr</small></span></p>
+        <p class="price-alt"><span class="m">or $4,950/yr</span><span class="y">or $495/mo</span></p>
+        <ul>
+          <li>For teams running the roadmap themselves.</li>
+          <li>Weekly tracking against your roadmap: status by pillar, what's done, in progress and stalled, and what waiting is costing.</li>
+          <li>Alerts on rating drops, buy-box loss, stockouts and competitors overtaking you in AI answers.</li>
+          <li>Buyer readiness: is your Case for Yes stronger, and the one thing still missing.</li>
+          <li>A quarterly re-check of all five pillars.</li>
+          <li>Subscriber rates on strategy and media.</li>
+        </ul>
+        <p class="card-note">Available after your Playbook.</p>
+      </article>
+
+      <article class="tier">
+        <p class="tier-name">Operator</p>
+        <p class="price"><span class="m">$2,500<small>/mo</small></span><span class="y">$25,000<small>/yr</small></span></p>
+        <p class="price-alt"><span class="m">or $25,000/yr</span><span class="y">or $2,500/mo</span></p>
+        <ul>
+          <li>Everything in Monitor.</li>
+          <li>A senior operator reviews your updates twice a month, with a 30-minute check-in.</li>
+          <li>A quarterly roadmap refresh.</li>
+          <li>Your Case for Yes updated before every buyer meeting.</li>
+          <li>Subscriber rates on strategy and media.</li>
+        </ul>
+        <p class="card-note">Your first 90 days are included with every Playbook.</p>
+      </article>
+
+    </div>
+    <p class="tiers-foot">Prices in USD. Execution is scoped per project. Subscribers get discounted strategy and media rates.</p>
+  </div>
+</section>
+
+<section class="fog" id="how">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">How it works</p></div>
+    <ol class="steps">
+      <li class="step"><div><h3>Run your free Snapshot.</h3><p>Two pillars, on your real data.</p></div></li>
+      <li class="step"><div><h3>Get your Playbook.</h3><p>All five pillars, the roadmap and the Case for Yes.</p></div></li>
+      <li class="step"><div><h3>Walk through it with a senior operator.</h3><p>Live, on day 0.</p></div></li>
+      <li class="step"><div><h3>90 days of Operator.</h3><p>Weekly updates, check-ins at day 30 and day 60, and a full re-check at day 90.</p></div></li>
+      <li class="step"><div><h3>Keep going your way.</h3><p>Monitor, Operator, or run the roadmap through us.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Who it's for</p></div>
+    <div class="fit">
+      <div><h3>A fit</h3><p>Brands that started online, have proven traction, and want a retail buyer to say yes.</p></div>
+      <div class="no"><h3>Not a fit yet</h3><p>Brands still finding product-market fit. Come back when the product is working online.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="inv proof" id="proof">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Proof</p><h2>Built by people who've sat on both sides of the table.</h2></div>
+    <p class="big">Senior leadership's direct experience spans L'Oréal, NBCUniversal, Kraft Heinz and Walmart, and more than $1B in campaign and media investment.</p>
+    <!-- Client quote slots. Fill and remove `hidden` only after written sign-off. -->
+    <div class="quotes" hidden>
+      <figure class="quote" hidden><blockquote></blockquote><figcaption></figcaption></figure>
+      <figure class="quote" hidden><blockquote></blockquote><figcaption></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="head"><p class="eyebrow">FAQ</p><h2>Questions founders ask.</h2></div>
+    <div class="faq">
+      <details><summary>What data do you pull?</summary><p>Your Amazon and Walmart listings, your store, your ad accounts, and how you show up in AI shopping answers.</p></details>
+      <details><summary>Do I get a score?</summary><p>No. You get a status for each pillar and a plan. Buyers don't buy numbers. They buy less risk.</p></details>
+      <details><summary>What happens at day 90?</summary><p>You choose Monitor, Operator, or neither. The Playbook is yours either way.</p></details>
+      <details><summary>Who works on my Playbook?</summary><p>Senior operators at BreakPoint. No junior team after the pitch.</p></details>
+      <details><summary>Can you do the work for us?</summary><p>Yes. Execution is scoped per roadmap item, and subscribers get discounted rates.</p></details>
+      <details><summary>Is BreakPoint an agency or software?</summary><p>Still an agency. Now with a platform.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="inv close">
+  <div class="wrap">
+    <p class="eyebrow">Start here</p>
+    <h2>Find out what a buyer will poke at, before they do.</h2>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://app.breakpointstrat.com/p/snapshot?ref=playbook-close" data-track="snapshot-close">Run your free Snapshot</a>
+      <p class="agency">Looking for the agency? <a href="https://www.breakpointstrat.com/" data-track="agency-close">Visit breakpointstrat.com</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><img src="/assets/logo/bp-logo-full-white.png" alt="BreakPoint Strategies" width="129" height="32" loading="lazy"></div>
+      <div><h4>The Playbook</h4><ul><li><a href="#tiers">Tiers</a></li><li><a href="#how">How it works</a></li><li><a href="https://app.breakpointstrat.com/p/snapshot?ref=playbook-footer" data-track="snapshot-footer">Free Snapshot</a></li><li><a href="https://app.breakpointstrat.com/p/sign-in">Client login</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="https://www.breakpointstrat.com/">breakpointstrat.com</a></li><li><a href="https://www.breakpointstrat.com/about">About</a></li><li><a href="https://www.breakpointstrat.com/contact">Contact</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="mailto:hello@breakpointstrat.com">hello@breakpointstrat.com</a></li><li><a href="tel:+14793085999">+1 (479) 308-5999</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 BreakPoint Strategies</span><a href="https://www.breakpointstrat.com/legal">Privacy</a><a href="https://www.breakpointstrat.com/legal">Terms</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Monthly / annual toggle
+  var cards = document.getElementById("tier-cards");
+  document.querySelectorAll(".toggle button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll(".toggle button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      cards.classList.toggle("annual", b.dataset.period === "annual");
+    });
+  });
+
+  // After the founding window, the structured data carries the standard price.
+  if (document.documentElement.classList.contains("post-founding")) {
+    var ld = document.getElementById("ld-product");
+    var data = JSON.parse(ld.textContent);
+    data.offers[1].price = "9950";
+    delete data.offers[1].priceValidUntil;
+    ld.textContent = JSON.stringify(data);
+  }
+
+  // Mobile menu closes after an in-page jump
+  var menu = document.querySelector(".menu");
+  menu.querySelectorAll('a[href^="#"]').forEach(function (a) { a.addEventListener("click", function () { menu.open = false; }); });
+
+  // Button clicks go to HubSpot as virtual page views under /click/ (custom events need Enterprise).
+  window._hsq = window._hsq || [];
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("a[data-track]");
+    if (!a) return;
+    _hsq.push(["setPath", "/click/" + a.dataset.track]);
+    _hsq.push(["trackPageView"]);
+    _hsq.push(["setPath", location.pathname]);
+    var leaving = a.target !== "_blank" && a.getAttribute("href").charAt(0) !== "#" && !e.metaKey && !e.ctrlKey && !e.shiftKey;
+    if (leaving && window._hsq.push !== Array.prototype.push) {
+      e.preventDefault();
+      setTimeout(function () { location.href = a.href; }, 200);
+    }
+  });
+})();
+</script>
+</body>
+</html>
