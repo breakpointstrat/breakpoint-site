@@ -12,7 +12,17 @@
       "statusCode": 301
     },
     {
-      "source": "/:page(about|contact|legal|snapshot|data-deletion|llms.txt)",
+      "source": "/snapshot",
+      "destination": "https://app.breakpointstrat.com/p/snapshot?ref=main-snapshot-page",
+      "statusCode": 301
+    },
+    {
+      "source": "/snapshot.html",
+      "destination": "https://app.breakpointstrat.com/p/snapshot?ref=main-snapshot-page",
+      "statusCode": 301
+    },
+    {
+      "source": "/:page(about|contact|legal|data-deletion|llms.txt)",
       "has": [
         {
           "type": "host",
@@ -34,13 +44,13 @@
     },
     {
       "source": "/score",
-      "destination": "/snapshot",
-      "permanent": true
+      "destination": "https://app.breakpointstrat.com/p/snapshot?ref=main-score",
+      "statusCode": 301
     },
     {
       "source": "/score/:id",
-      "destination": "/snapshot",
-      "permanent": true
+      "destination": "https://app.breakpointstrat.com/p/snapshot?ref=main-score",
+      "statusCode": 301
     }
   ],
   "headers": [

@@ -12,7 +12,7 @@ Discoverability, Marketplace & Velocity, and Brand & Category Fit.
 
 ## Products
 
-- Free Snapshot (two pillars of the Playbook, on request): https://breakpointstrat.com/snapshot
+- Free Snapshot (two pillars of the Playbook, on request): https://app.breakpointstrat.com/p/snapshot?ref=llms
 - The Playbook (retail readiness diagnostic, roadmap and weekly tracking; free Snapshot, Playbook, Monitor and Operator tiers): https://playbook.breakpointstrat.com/
 
 ## Founder background
