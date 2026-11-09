@@ -1,5 +1,5 @@
 // Spots left. Change these two numbers by hand, then push to main (live in about a minute).
-// 0 shows the "full" copy. Founding at 0 also switches /pricing to list prices.
+// 0 shows the "full" copy. Founding at 0 also hides the founding-rate lines.
 // Delete a line (or set it to null) to hide that number and keep the rest of the card.
 var BP_SPOTS = {
   pilot: 3,
