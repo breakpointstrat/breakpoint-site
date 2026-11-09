@@ -140,20 +140,13 @@ html:has(.menu[open]){overflow:hidden}
 }
 
 /* tiers */
-.toggle{display:inline-flex;border:1px solid var(--ink);border-radius:999px;padding:3px;margin-bottom:32px}
-.toggle button{appearance:none;border:0;background:none;border-radius:999px;padding:10px 18px;font:500 12px/1 var(--eyebrow);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);cursor:pointer}
-.toggle button[aria-pressed="true"]{background:var(--ink);color:#fff}
-.toggle .save{color:var(--citrus-press);margin-left:6px}
-.toggle button[aria-pressed="true"] .save{color:#FFB4A6}
 .tiers{display:grid;gap:20px}
 .tier{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:4px;background:#fff;padding:26px 22px 24px}
 .tier.featured{border:2px solid var(--citrus)}
 .tier-name{font:500 12px/1.2 var(--eyebrow);letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
 .price{margin-top:14px;font:400 44px/1 var(--display);color:var(--ink);letter-spacing:-.02em}
-.price s{font-size:26px;color:var(--n500);margin-right:8px;text-decoration-thickness:1.5px}
-.price small{font:400 16px/1 var(--body);color:var(--n600);letter-spacing:0;margin-left:4px}
+.price-ask{font-size:30px;line-height:1.1}
 .price-note{margin-top:10px;font-size:14px;line-height:1.4;color:var(--citrus-press);font-weight:500}
-.price-alt{margin-top:10px;font-size:14px;color:var(--n600)}
 .tier ul{list-style:none;margin-top:22px;border-top:1px solid var(--line)}
 .tier li{position:relative;padding:11px 0 11px 22px;border-bottom:1px solid var(--line);font-size:15px;line-height:1.5}
 .tier li::before{content:"";position:absolute;left:2px;top:19px;width:8px;height:1.5px;background:var(--citrus)}
@@ -163,8 +156,6 @@ html:has(.menu[open]){overflow:hidden}
 .tier-cta .btn{width:100%}
 .card-note{margin-top:auto;padding-top:22px;font:500 12px/1.4 var(--eyebrow);letter-spacing:.12em;text-transform:uppercase;color:var(--n600)}
 .tiers-foot{margin-top:28px;font-size:14px;color:var(--n600)}
-.y,.annual .m{display:none}
-.annual .y{display:inline}
 @media (min-width:760px){.tiers{grid-template-columns:1fr 1fr}}
 @media (min-width:1240px){.tiers{grid-template-columns:repeat(4,1fr);gap:16px}.tier{padding:26px 20px 22px}.tier li.inc{margin:0 -20px;padding-left:42px;padding-right:20px}.tier li.inc::before{left:22px}.tier-cta .btn{padding:0 14px;white-space:nowrap;font-size:12px}}
 

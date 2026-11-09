@@ -1,23 +1,20 @@
 (function () {
-  // Monthly / annual toggle (pricing)
-  var cards = document.getElementById("tier-cards");
-  document.querySelectorAll(".toggle button").forEach(function (b) {
-    b.addEventListener("click", function () {
-      document.querySelectorAll(".toggle button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
-      cards.classList.toggle("annual", b.dataset.period === "annual");
-    });
-  });
-
-  // After the founding window, the structured data carries the list prices.
-  var ld = document.getElementById("ld-product");
-  if (ld && document.documentElement.classList.contains("post-founding")) {
-    var data = JSON.parse(ld.textContent);
-    data.offers[1].price = "9950";
-    data.offers[2].priceSpecification.price = "1495";
-    data.offers[3].priceSpecification.price = "3495";
-    [1, 2, 3].forEach(function (i) { delete data.offers[i].priceValidUntil; });
-    ld.textContent = JSON.stringify(data);
-  }
+  // "Book an intro" links open the 15-minute intro in a booking popup; the plain link is the fallback.
+  (function (C, A, L) { var p = function (a, ar) { a.q.push(ar); }; var d = C.document; C.Cal = C.Cal || function () { var cal = C.Cal; var ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { var api = function () { p(api, arguments); }; var namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  var NS = "breakpoint-15-minute-intro-call";
+  var LINK = "masonkesner/breakpoint-15-minute-intro-call";
+  Cal("init", NS, { origin: "https://app.cal.com" });
+  Cal.config = Cal.config || {};
+  Cal.config.forwardQueryParams = true;
+  Cal.ns[NS]("ui", { hideEventTypeDetails: false, layout: "month_view" });
+  document.addEventListener("click", function (e) {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    var a = e.target.closest && e.target.closest('a[href*="cal.com/masonkesner/"]');
+    if (!a || !window.Cal || !Cal.ns || !Cal.ns[NS]) return;
+    e.preventDefault();
+    var d = a.closest("details[open]"); if (d && !d.closest(".faq")) d.open = false;
+    Cal.ns[NS]("modal", { calLink: LINK, config: { layout: "month_view", useSlotsViewOnSmallScreen: "true" } });
+  }, true);
 
   // Mobile menu closes after an in-page jump
   var menu = document.querySelector(".menu");
